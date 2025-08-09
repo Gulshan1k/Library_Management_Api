@@ -1,0 +1,26 @@
+﻿CREATE TABLE Authors (
+  Id            INT            PRIMARY KEY IDENTITY(1,1),
+  Name          NVARCHAR(200)  NOT NULL,
+  Bio           NVARCHAR(MAX)  NULL
+);
+
+CREATE TABLE Categories (
+  Id            INT            PRIMARY KEY IDENTITY(1,1),
+  Name          NVARCHAR(200)  NOT NULL,
+  Description   NVARCHAR(MAX)  NULL
+);
+
+CREATE TABLE Books (
+  Id               INT            PRIMARY KEY IDENTITY(1,1),
+  Title            NVARCHAR(300)  NOT NULL,
+  Description      NVARCHAR(MAX)  NULL,
+  PublicationYear  INT            NOT NULL,
+  AuthorId         INT            NOT NULL,
+  CategoryId       INT            NOT NULL,
+);
+
+select * from Authors;
+select * from Categories;
+select * from Books;
+
+);
